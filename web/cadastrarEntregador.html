@@ -1,0 +1,123 @@
+<!-- Informa que o documento utiliza HTML5. -->
+<!DOCTYPE html>
+
+<!-- Início do documento HTML. -->
+<html>
+
+    <!-- Início do cabeçalho da página. -->
+    <head>
+
+        <!-- Define o título exibido na aba do navegador. -->
+        <title>Cadastrar Fornecedores</title>
+
+        <!-- Importa a biblioteca Bootstrap para estilizar a página. -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+        <!-- Define a codificação de caracteres da página. -->
+        <meta charset="UTF-8">
+
+        <!-- Ajusta a página para diferentes tamanhos de tela. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Fecha o cabeçalho da página. -->
+    </head>
+
+    <!-- Início do corpo da página. -->
+    <body>
+
+        <!-- Cria uma seção centralizada com margem superior. -->
+        <section class="container mt-4">
+
+            <!-- Exibe o título principal da página. -->
+            <h1 class="text-center">Cadastrar Fornecedor</h1>
+
+            <!-- Inicia o formulário que envia os dados para formUsuario.jsp. -->
+            <form method="post" action="formFornecedor.jsp">
+
+                <!-- Cria um grupo para o campo nome. -->
+                <div class="form-group">
+
+                    <!-- Exibe o texto do campo nome. -->
+                    <label>Nome:</label>
+
+                    <!-- Campo de texto para informar o nome. -->
+                    <input type="text" name="nome" class="form-control" required>
+
+                    <!-- Fecha o grupo do campo nome. -->
+                </div>
+
+                <!-- Cria um grupo para o campo cnpj. -->
+                <div class="form-group">
+
+                    <!-- Exibe o texto do campo cpf. -->
+                    <label>CPF:</label>
+
+                    <!-- Campo para informar o cpf. -->
+                    <input type="number" name="cpf" class="form-control" required>
+
+                    <!-- Fecha o grupo do campo cpf. -->
+                </div>
+                
+                <div class="form-group">
+                    <label>Data de nascimento:</label>
+                    <input type="number" name="data" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>Veículo:</label>
+                    <input type="text" name="veiculo" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>CNH:</label>
+                    <input type="number" name="cnh" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>Órgão emissor:</label>
+                    <input type="text" name="orgao_emissor" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label>Data de emissão:</label>
+                    <input type="number" name="data_emissao" class="form-control">
+                </div>
+
+                <!-- Cria um grupo para o campo telefone. -->
+                <div class="form-group">
+
+                    <!-- Exibe o texto do campo telefone. -->
+                    <label>Telefone:</label>
+
+                    <!-- Campo de texto para informar o telefone. -->
+                    <input type="number" name="telefone" class="form-control" required>
+
+                    <!-- Fecha o grupo do campo telefone. -->
+                </div>
+
+                <!-- Cria um grupo para o campo email. -->
+                <div class="form-group">
+
+                    <!-- Exibe o texto do campo email. -->
+                    <label>Email:</label>
+
+                    <!-- Campo de texto para informar o email. -->
+                    <input type="text" name="email" class="form-control" required>
+
+                    <!-- Fecha o grupo do campo email. -->
+                </div>                    
+
+                <!-- Cria o botão para enviar o formulário. -->
+                <input type="submit" value="Enviar" class="btn btn-primary">
+
+                <!-- Fecha o formulário. -->
+            </form>
+
+            <!-- Fecha a seção principal. -->
+        </section>
+
+        <!-- Fecha o corpo da página. -->
+    </body>
+
+    <!-- Fecha o documento HTML. -->
+</html>
