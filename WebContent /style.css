@@ -1,1 +1,1334 @@
+/* =========================================================
+   FLASHBITE
+   CSS PRINCIPAL DO SISTEMA
+   ========================================================= */
 
+/* ---------------------------------------------------------
+   CONFIGURAÇÕES GERAIS
+   --------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f5f7;
+    color: #333333;
+    min-height: 100vh;
+}
+
+/* Remove decoração dos links */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   PALETA DE CORES
+   ========================================================= */
+
+:root {
+    --vermelho: #c90000;
+    --vermelho-escuro: #a80000;
+    --vermelho-claro: #e21b1b;
+
+    --branco: #ffffff;
+    --cinza-fundo: #f4f5f7;
+    --cinza-claro: #eeeeee;
+    --cinza-borda: #dddddd;
+    --cinza-texto: #666666;
+    --preto: #222222;
+
+    --verde: #28a745;
+    --amarelo: #ffc107;
+    --azul: #007bff;
+}
+
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+   ========================================================= */
+
+.flashbite-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   MENU LATERAL
+   ========================================================= */
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+
+    background-color: var(--vermelho);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   LOGO
+   --------------------------------------------------------- */
+
+.sidebar-logo {
+    height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.sidebar-logo img {
+    max-width: 130px;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+.logo-placeholder {
+    color: white;
+    text-align: center;
+}
+
+.logo-placeholder .logo-icon {
+    font-size: 55px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.logo-placeholder .logo-text {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 3px 0;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    padding: 13px 18px;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+}
+
+.sidebar-menu a.active {
+    background-color: var(--vermelho-escuro);
+
+    border-radius: 0 22px 22px 0;
+
+    font-weight: bold;
+}
+
+
+/* Ícone do menu */
+
+.menu-icon {
+    width: 30px;
+    min-width: 30px;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    margin-right: 8px;
+}
+
+.menu-text {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SEPARADOR DO MENU
+   ========================================================= */
+
+.sidebar-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    margin: 18px 0 5px 0;
+}
+
+
+/* =========================================================
+   BOTÃO SAIR
+   ========================================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    padding: 12px 0;
+}
+
+.sidebar-bottom a {
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+}
+
+.sidebar-bottom a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL
+   ========================================================= */
+
+.main-content {
+    margin-left: 230px;
+
+    width: calc(100% - 230px);
+
+    min-height: 100vh;
+
+    background-color: var(--cinza-fundo);
+}
+
+
+/* =========================================================
+   CABEÇALHO SUPERIOR
+   ========================================================= */
+
+.topbar {
+    height: 72px;
+
+    background-color: var(--vermelho);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 35px;
+
+    color: white;
+}
+
+
+/* Usuário */
+
+.user-area {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    color: var(--vermelho);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+
+    font-size: 20px;
+}
+
+.user-info {
+    line-height: 1.2;
+}
+
+.user-name {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.user-role {
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+.user-arrow {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTEÚDO DA PÁGINA
+   ========================================================= */
+
+.page-content {
+    padding: 30px 35px 45px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.breadcrumb-flashbite {
+    font-size: 12px;
+
+    color: #888888;
+
+    margin-bottom: 15px;
+}
+
+.breadcrumb-flashbite a {
+    color: #777777;
+}
+
+.breadcrumb-flashbite a:hover {
+    color: var(--vermelho);
+}
+
+.breadcrumb-flashbite .current {
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   CABEÇALHO DA PÁGINA
+   ========================================================= */
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-title {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--preto);
+
+    margin-bottom: 5px;
+}
+
+.page-subtitle {
+    font-size: 13px;
+
+    color: #888888;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL
+   ========================================================= */
+
+.flashbite-card {
+    background-color: white;
+
+    border: 1px solid #e4e4e4;
+
+    border-radius: 5px;
+
+    padding: 25px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   SEÇÕES DO FORMULÁRIO
+   ========================================================= */
+
+.form-section {
+    margin-bottom: 28px;
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+}
+
+.form-section-title {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #333333;
+
+    padding-bottom: 10px;
+
+    margin-bottom: 18px;
+
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.form-section-title::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 4px;
+    height: 16px;
+
+    background-color: var(--vermelho);
+
+    margin-right: 8px;
+
+    vertical-align: -2px;
+
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #444444;
+
+    margin-bottom: 6px;
+}
+
+.required {
+    color: var(--vermelho);
+}
+
+
+/* Campos */
+
+.flashbite-input,
+.flashbite-select,
+.flashbite-textarea {
+    width: 100%;
+
+    min-height: 39px;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 4px;
+
+    background-color: white;
+
+    color: #444444;
+
+    padding: 9px 12px;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.flashbite-input::placeholder,
+.flashbite-textarea::placeholder {
+    color: #b1b1b1;
+}
+
+.flashbite-input:focus,
+.flashbite-select:focus,
+.flashbite-textarea:focus {
+    border-color: var(--vermelho);
+
+    box-shadow: 0 0 0 2px rgba(201, 0, 0, 0.08);
+}
+
+
+/* Textarea */
+
+.flashbite-textarea {
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   GRID DOS FORMULÁRIOS
+   ========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0 20px;
+}
+
+.form-grid-2 {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 0 20px;
+}
+
+.form-grid-4 {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 0 15px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    padding-top: 20px;
+
+    margin-top: 15px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* Botão padrão */
+
+.btn-flashbite {
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 10px 27px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* Salvar */
+
+.btn-salvar {
+    background-color: var(--vermelho);
+
+    color: white;
+}
+
+.btn-salvar:hover {
+    background-color: var(--vermelho-escuro);
+
+    color: white;
+}
+
+
+/* Cancelar */
+
+.btn-cancelar {
+    background-color: #dedede;
+
+    color: #555555;
+}
+
+.btn-cancelar:hover {
+    background-color: #cccccc;
+
+    color: #333333;
+}
+
+
+/* Editar */
+
+.btn-editar {
+    background-color: var(--azul);
+
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #0069d9;
+
+    color: white;
+}
+
+
+/* Excluir */
+
+.btn-excluir {
+    background-color: #dc3545;
+
+    color: white;
+}
+
+.btn-excluir:hover {
+    background-color: #bd2130;
+
+    color: white;
+}
+
+
+/* =========================================================
+   TABELAS
+   ========================================================= */
+
+.table-card {
+    background-color: white;
+
+    border: 1px solid #e2e2e2;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.flashbite-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 0;
+}
+
+.flashbite-table thead {
+    background-color: #f7f7f7;
+}
+
+.flashbite-table th {
+    color: #444444;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-align: left;
+
+    padding: 13px 15px;
+
+    border-bottom: 2px solid #dddddd;
+
+    white-space: nowrap;
+}
+
+.flashbite-table td {
+    padding: 13px 15px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 12px;
+
+    color: #555555;
+
+    vertical-align: middle;
+}
+
+.flashbite-table tbody tr:hover {
+    background-color: #fff7f7;
+}
+
+.flashbite-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   AÇÕES DA TABELA
+   ========================================================= */
+
+.table-actions {
+    display: flex;
+
+    gap: 6px;
+
+    align-items: center;
+}
+
+.action-button {
+    width: 32px;
+    height: 32px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.action-edit {
+    background-color: #007bff;
+}
+
+.action-edit:hover {
+    background-color: #0069d9;
+
+    color: white;
+}
+
+.action-delete {
+    background-color: #dc3545;
+}
+
+.action-delete:hover {
+    background-color: #bd2130;
+
+    color: white;
+}
+
+.action-view {
+    background-color: #6c757d;
+}
+
+.action-view:hover {
+    background-color: #545b62;
+
+    color: white;
+}
+
+
+/* =========================================================
+   CABEÇALHO DE LISTAGEM
+   ========================================================= */
+
+.list-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.list-header-title {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #333333;
+}
+
+.btn-novo {
+    background-color: var(--vermelho);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 10px 18px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.btn-novo:hover {
+    background-color: var(--vermelho-escuro);
+
+    color: white;
+}
+
+
+/* =========================================================
+   CARDS DO DASHBOARD
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    background-color: white;
+
+    border-radius: 6px;
+
+    padding: 20px;
+
+    border: 1px solid #e4e4e4;
+
+    display: flex;
+
+    align-items: center;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 7px;
+
+    background-color: #fff0f0;
+
+    color: var(--vermelho);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+
+    margin-right: 14px;
+}
+
+.dashboard-info {
+    flex: 1;
+}
+
+.dashboard-label {
+    color: #888888;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+.dashboard-number {
+    color: #333333;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.status-pendente {
+    background-color: #fff3cd;
+
+    color: #856404;
+}
+
+.status-preparo {
+    background-color: #cce5ff;
+
+    color: #004085;
+}
+
+.status-entrega {
+    background-color: #d1ecf1;
+
+    color: #0c5460;
+}
+
+.status-entregue {
+    background-color: #d4edda;
+
+    color: #155724;
+}
+
+.status-cancelado {
+    background-color: #f8d7da;
+
+    color: #721c24;
+}
+
+
+/* =========================================================
+   ALERTAS
+   ========================================================= */
+
+.flashbite-alert {
+    padding: 12px 15px;
+
+    border-radius: 5px;
+
+    margin-bottom: 20px;
+
+    font-size: 13px;
+}
+
+.flashbite-alert-success {
+    background-color: #d4edda;
+
+    color: #155724;
+
+    border: 1px solid #c3e6cb;
+}
+
+.flashbite-alert-danger {
+    background-color: #f8d7da;
+
+    color: #721c24;
+
+    border: 1px solid #f5c6cb;
+}
+
+.flashbite-alert-warning {
+    background-color: #fff3cd;
+
+    color: #856404;
+
+    border: 1px solid #ffeeba;
+}
+
+
+/* =========================================================
+   PÁGINA INICIAL
+   ========================================================= */
+
+.welcome-card {
+    background-color: white;
+
+    border-radius: 7px;
+
+    padding: 35px;
+
+    border: 1px solid #e3e3e3;
+
+    margin-bottom: 25px;
+}
+
+.welcome-title {
+    font-size: 27px;
+
+    font-weight: bold;
+
+    color: #333333;
+
+    margin-bottom: 8px;
+}
+
+.welcome-title span {
+    color: var(--vermelho);
+}
+
+.welcome-text {
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ÍCONES DOS MÓDULOS
+   ========================================================= */
+
+.module-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.module-card {
+    background-color: white;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 6px;
+
+    padding: 22px;
+
+    transition: 0.2s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    border-color: #dddddd;
+}
+
+.module-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 6px;
+
+    background-color: #fff0f0;
+
+    color: var(--vermelho);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.module-title {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color: #333333;
+
+    margin-bottom: 5px;
+}
+
+.module-description {
+    font-size: 12px;
+
+    color: #888888;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f4f5f7;
+}
+
+.login-container {
+    width: 390px;
+
+    max-width: 90%;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 7px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+}
+
+.login-logo {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.login-logo-icon {
+    font-size: 50px;
+
+    color: var(--vermelho);
+}
+
+.login-title {
+    font-size: 21px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #888888;
+
+    margin-bottom: 25px;
+}
+
+.btn-login {
+    width: 100%;
+
+    background-color: var(--vermelho);
+
+    color: white;
+
+    border: none;
+
+    padding: 11px;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background-color: var(--vermelho-escuro);
+
+    color: white;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.footer {
+    text-align: center;
+
+    color: #999999;
+
+    font-size: 11px;
+
+    padding: 25px 0;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* Tablets */
+
+@media (max-width: 1100px) {
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .module-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Tablets pequenos */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .main-content {
+        margin-left: 70px;
+
+        width: calc(100% - 70px);
+    }
+
+    .sidebar-logo {
+        height: 90px;
+
+        padding: 10px;
+    }
+
+    .sidebar-logo img {
+        max-width: 48px;
+    }
+
+    .logo-placeholder .logo-icon {
+        font-size: 32px;
+    }
+
+    .logo-placeholder .logo-text {
+        display: none;
+    }
+
+    .sidebar-menu a,
+    .sidebar-bottom a {
+        justify-content: center;
+
+        padding: 14px 5px;
+    }
+
+    .menu-icon {
+        margin-right: 0;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-content {
+        padding: 25px 20px;
+    }
+}
+
+
+/* Celulares */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        width: 0;
+
+        overflow: hidden;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .topbar {
+        height: 60px;
+
+        padding: 0 15px;
+    }
+
+    .page-content {
+        padding: 20px 15px;
+    }
+
+    .page-title {
+        font-size: 21px;
+    }
+
+    .flashbite-card {
+        padding: 18px;
+    }
+
+    .form-grid,
+    .form-grid-2,
+    .form-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .module-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .btn-flashbite {
+        width: 100%;
+    }
+
+    .list-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .table-card {
+        overflow-x: auto;
+    }
+
+    .flashbite-table {
+        min-width: 700px;
+    }
+
+    .user-name,
+    .user-role {
+        display: none;
+    }
+}
