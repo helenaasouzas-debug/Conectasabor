@@ -55,7 +55,7 @@
 
     <h2 class="text-center">Editar Comida</h2>
 
-    <form action="atualizarComida.jsp" method="post">
+    <form action="atualizarComidas.jsp" method="post">
 
         <input type="hidden" name="id" value="<%=id%>">
 

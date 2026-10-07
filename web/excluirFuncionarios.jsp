@@ -22,7 +22,7 @@
 
         ps.executeUpdate();
 
-        response.sendRedirect("listarfuncionarios.jsp");
+        response.sendRedirect("listarFuncionario.jsp");
 
         return;
 

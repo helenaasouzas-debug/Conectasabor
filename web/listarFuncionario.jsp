@@ -21,7 +21,7 @@
 
             <h2 class="text-center">Funcionários Cadastrados</h2>
 
-            <a href="index.html" class="btn btn-success mb-3">
+            <a href="cadastrarFuncionario.html" class="btn btn-success mb-3">
                 Novo Cadastro
             </a>
 
@@ -82,12 +82,12 @@
 
                         <td>
 
-                            <a href="editarFuncionario.jsp?id=<%= rs.getInt("id")%>"
+                            <a href="editarFuncionarios.jsp?id=<%= rs.getInt("id")%>"
                                class="btn btn-warning btn-sm">
                                 Editar
                             </a>
 
-                            <a href="excluirFuncionario.jsp?id=<%= rs.getInt("id")%>"
+                            <a href="excluirFuncionarios.jsp?id=<%= rs.getInt("id")%>"
                                class="btn btn-danger btn-sm"
                                onclick="return confirm('Deseja realmente excluir este funcionário?');">
                                 Excluir

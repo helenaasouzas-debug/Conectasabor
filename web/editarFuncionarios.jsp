@@ -67,7 +67,7 @@
 
     <h2 class="text-center">Editar Funcionário</h2>
 
-    <form action="atualizarFuncionario.jsp" method="post">
+    <form action="atualizarFuncionarios.jsp" method="post">
 
         <input type="hidden" name="id" value="<%=id%>">
 

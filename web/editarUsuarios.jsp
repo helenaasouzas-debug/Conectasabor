@@ -240,7 +240,7 @@
                 </button>
 
                 <%-- Cria o botão para cancelar e voltar para a listagem. --%>
-                <a href="listar.jsp" class="btn btn-secondary">
+                <a href="listarUsuario.jsp" class="btn btn-secondary">
                     Cancelar
                 </a>
 

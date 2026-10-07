@@ -65,7 +65,7 @@
 
     <h2 class="text-center">Editar Pedido</h2>
 
-    <form action="atualizarPedido.jsp" method="post">
+    <form action="atualizarPedidos.jsp" method="post">
 
         <input type="hidden" name="id" value="<%=id%>">
 

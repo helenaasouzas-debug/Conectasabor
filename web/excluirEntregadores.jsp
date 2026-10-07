@@ -59,7 +59,7 @@
 
     </div>
 
-    <a href="listarentregadores.jsp" class="btn btn-primary">
+    <a href="listarEntregador.jsp" class="btn btn-primary">
         Voltar para a Listagem
     </a>
 

@@ -21,7 +21,7 @@
 
             <h2 class="text-center">Comidas Cadastradas</h2>
 
-            <a href="index.html" class="btn btn-success mb-3">
+            <a href="cadastrarComida.html" class="btn btn-success mb-3">
                 Novo Cadastro
             </a>
 
@@ -70,12 +70,12 @@
 
                         <td>
 
-                            <a href="editarComida.jsp?id=<%= rs.getInt("id")%>"
+                            <a href="editarComidas.jsp?id=<%= rs.getInt("id")%>"
                                class="btn btn-warning btn-sm">
                                 Editar
                             </a>
 
-                            <a href="excluirComida.jsp?id=<%= rs.getInt("id")%>"
+                            <a href="excluirComidas.jsp?id=<%= rs.getInt("id")%>"
                                class="btn btn-danger btn-sm"
                                onclick="return confirm('Deseja realmente excluir esta comida?');">
                                 Excluir

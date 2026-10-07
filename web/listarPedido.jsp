@@ -21,7 +21,7 @@
 
             <h2 class="text-center">Pedidos Cadastrados</h2>
 
-            <a href="index.html" class="btn btn-success mb-3">
+            <a href="cadastrarPedido.jsp" class="btn btn-success mb-3">
                 Novo Cadastro
             </a>
 
@@ -74,12 +74,12 @@
 
                         <td>
 
-                            <a href="editarPedido.jsp?id=<%= rs.getInt("id")%>"
+                            <a href="editarPedidos.jsp?id=<%= rs.getInt("id")%>"
                                class="btn btn-warning btn-sm">
                                 Editar
                             </a>
 
-                            <a href="excluirPedido.jsp?id=<%= rs.getInt("id")%>"
+                            <a href="excluirPedidos.jsp?id=<%= rs.getInt("id")%>"
                                class="btn btn-danger btn-sm"
                                onclick="return confirm('Deseja realmente excluir este pedido?');">
                                 Excluir

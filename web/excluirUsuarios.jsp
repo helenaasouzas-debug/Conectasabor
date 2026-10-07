@@ -48,7 +48,7 @@
         ps.executeUpdate();
 
         // Redireciona o usuário para a página de listagem.
-        response.sendRedirect("listarusuarios.jsp");
+        response.sendRedirect("listarUsuario.jsp");
 
         // Encerra a execução da página.
         return;
@@ -107,7 +107,7 @@
             </div>
 
             <%-- Cria um botão para retornar à listagem. --%>
-            <a href="listar.jsp" class="btn btn-primary">
+            <a href="listarUsuario.jsp" class="btn btn-primary">
 
                 <%-- Texto exibido no botão. --%>
                 Voltar para a Listagem

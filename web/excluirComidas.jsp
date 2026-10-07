@@ -22,7 +22,7 @@
 
         ps.executeUpdate();
 
-        response.sendRedirect("listarcomidas.jsp");
+        response.sendRedirect("listarComida.jsp");
 
         return;
 
@@ -59,7 +59,7 @@
 
     </div>
 
-    <a href="listarcomidas.jsp" class="btn btn-primary">
+    <a href="listarComida.jsp" class="btn btn-primary">
         Voltar para a Listagem
     </a>
 

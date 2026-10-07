@@ -22,7 +22,7 @@
 
         ps.executeUpdate();
 
-        response.sendRedirect("listarpedidos.jsp");
+        response.sendRedirect("listarPedido.jsp");
 
         return;
 

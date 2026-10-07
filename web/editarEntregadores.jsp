@@ -62,7 +62,7 @@
 
     <h2 class="text-center">Editar Entregador</h2>
 
-    <form action="atualizarEntregador.jsp" method="post">
+    <form action="atualizarEntregadores.jsp" method="post">
 
         <input type="hidden" name="id" value="<%=id%>">
 
